@@ -11,10 +11,69 @@ $(function(){
       name: "biggayicecream",
       city: ["manhattan"],
       criteria: ["toppings", "softserve", "sundaes"],
+    },
+
+    {
+      name: "cedars",
+      city: ["brooklyn"],
+      criteria: ["unique", "nofrills", "otherfood"],
+    },
+
+    {
+      name: "chinatown",
+      city: ["manhattan"],
+      criteria: ["choices"],
+    }
+
+    {
+      name: "cones",
+      city: ["manhattan"],
+      criteria: ["choices", "vegan"],
+    }
+
+    {
+      name: "gelato",
+      city: ["manhattan"],
+      criteria: ["choices", "adventurous flavors", "vegan"],
+    }
+
+    {
+      name: "iceandvice",
+      city: ["manhattan"],
+      criteria: ["adventurous", "funcones", "vegan", "sundaes"],
+    }
+
+    {
+      name: "morgansterns",
+      city: ["manhattan"],
+      criteria: ["sundaes", "adventurous", "vegan", "choices"],
+    }
+
+    {
+      name: "oddfellows",
+      city: ["manhattan", "brooklyn"],
+      criteria: ["adventurous"],
+    }
+
+    {
+      name: "softswerve",
+      city: ["manhattan"],
+      criteria: ["soft serve", "toppings", "sundaes", "cones"],
+    }
+
+    {
+      name: "superiorityburger",
+      city: ["manhattan"],
+      criteria: ["adventurous", "vegan", "otherfood"],
+    }
+
+    {
+      name: "vanleeuwen",
+      city: ["manhattan", "brooklyn"],
+      criteria: ["vegan", "sundaes", "nofrills", "pints"],
     }
   ]
 
-  // debugger;
 // check box
 
 $('input[type="checkbox"]').click(function() {
