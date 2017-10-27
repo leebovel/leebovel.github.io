@@ -1,7 +1,395 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <title>Best NYC Ice Cream: The Perfect Scoop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans:bold|Candal" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <h1>Your Perfect NYC Scoop</h1>
+    <h2>For ice cream lovers in NYC, choosing where to get the best frozen treats can be 
+    overwhelming: This town is packed with amazing ice cream shops! But we all have different
+    tastes. Some of us are looking for mind-bending flavor combinations, while others crave
+    something a little more traditional. Whatever your tastes, this city has got you covered.</h2>
+    
+    <h3>Select your preferences from the checkboxes below, and discover the best spot for your perfect scoop.</h3>
+  </header>
+
+  <div class="location">
+    <legend><strong>Located in:</strong></legend>
+      <div class="checkbox">
+        <input type="checkbox" id="manhattan" name="location" value="manhattan">
+        <label for="manhattan">Manhattan</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="brooklyn" name="location" value="brooklyn">
+        <label for="brooklyn">Brooklyn</label>
+      </div>
+  </div>
+
+  <div class="criteria">
+    <legend><strong>Great if you want:</strong></legend>
+      <div class="checkbox">
+        <input type="checkbox" id="vegan" name="criteria" value="vegan">
+        <label for="vegan">Vegan options</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="softserve" name="criteria" value="softserve">
+        <label for="softserve">Soft serve</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="adventurous" name="criteria" value="adventurous">
+        <label for="adventurous">Adventurous flavors</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="toppings" name="criteria" value="toppings">
+        <label for="toppings">Eccentric toppings</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="sundaes" name="criteria" value="sundaes">
+        <label for="sundaes">Sundaes and other frozen treats</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="choices" name="criteria" value="choices">
+        <label for="choices">Extensive choices</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="funcones" name="criteria" value="funcones">
+        <label for="funcones">Novelty cones</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="otherfood" name="criteria" value="otherfood">
+        <label for="otherfood">Non-ice cream eats</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="unique" name="criteria" value="unique">
+        <label for="unique">Something you can't find elsewhere</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="pints" name="criteria" value="pints">
+        <label for="pints">Pints to go</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="nofrills" name="criteria" value="nofrills">
+        <label for="nofrills">No-frills flavors</label>
+      </div>
+
+  </div>
+
+  <div class="shops">
+
+<!-- ample hills -->
+
+    <div class="card" id="amplehills">
+      <img src="images/ample-hills-sized.jpg" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#amplehillsdetails">Ample Hills Creamery</button>
+      </div>
+    </div>
+
+    <div id="amplehillsdetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><a href="https://www.amplehills.com" target="_blank">Ample Hills Creamery</a></h4>
+      </div>
+      <div class="modal-body">
+        <p><strong>Locations:</strong> Brooklyn (Prospect Heights, Gowanus, and Downtown Brooklyn), Manhattan (Hell’s Kitchen and Meatpacking District)</p>
+
+        <p>This Brooklyn-born ice cream shop is where you go when you want to feel like a kid again. Flavors are packed with sweet and salty snacks like Ritz crackers, potato chips, cookies, and butter cake … and then can be tucked inside a pretzel cone. It’s one of the most whimsical ice cream shops in the city — and also one of the best. You can also purchase pints at the shops or other retailers around the city, or order online to be shipped nationwide.</p>
+
+        <p><strong>Sample flavors:</strong> The Munchies (pretzel-infused ice cream with Ritz crackers, potato chips, pretzels and mini M&Ms), Ooey Gooey Butter Cake (vanilla ice cream with St. Louis-style Ooey Gooey Butter Cake), Snap Mallow Pop (marshmallow ice cream with Rice Krispie clusters)</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!--     big gay ice cream -->
+
+    <div class="card" id="biggayicecream">
+      <img src="images/bgic-01.png" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#biggayicecreamdetails">Big Gay Ice Cream</button>
+      </div>
+    </div>
+
+    <div id="biggayicecreamdetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><a href="https://www.biggayicecream.com">Big Gay Ice Cream</a></h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT TK</p>
+      </div>
+    </div>
+    </div>
+    </div>
+  
+<!--    cedars --> 
+
+    <div class="card" id="cedars">
+      <img src="images/cedars-sized.jpg" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#cedarsdetails">Cedars Pastry Shop</button>
+      </div>
+    </div>
+
+    <div id="cedarsdetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cedars Pastry Shop</h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT TK</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+      <!-- chinatown ice cream factory -->
+
+    <div class="card" id="chinatown">
+      <img src="images/chinatown.jpg" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chinatowndetails">Chinatown Ice Cream Factory</button>
+      </div>
+    </div>
+
+    <div id="chinatowndetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><a href="http://www.chinatownicecreamfactory.com">Chinatown Ice Cream Factory</a></h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT TK</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- cones -->
+
+    <div class="card" id="cones">
+      <img src="images/cones.jpg" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#conesdetails">Cones</button>
+      </div>
+    </div>
+
+    <div id="conesdetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><a href="https://www.facebook.com/ConesNYC/">Cones</a></h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT TK</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!--  ice and vice -->
+ 
+    <div class="card" id="iceandvice">
+      <img src="images/iceandvice.jpg" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#iceandvicedetails">Ice & Vice</button>
+      </div>
+    </div>
+
+    <div id="iceandvicedetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><a href="http://iceandvice.com/">Ice & Vice</a></h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT TK</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!--    il laboratorio del gelato -->
+
+    <div class="card" id="gelato">
+      <img src="images/gelato-sized.jpg" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#gelatodetails">Il Laboratorio del Gelato</button>
+      </div>
+    </div>
+
+    <div id="gelatodetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><a href="http://www.laboratoriodelgelato.com/thelab.php" target="_blank">Il Laboratorio del Gelato</a></h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT TK</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!--     morgensterns -->
+
+    <div class="card" id="morgensterns">
+      <img src="images/morgensterns-sized.jpg" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#morgensternsdetails">Morgenstern's Finest Ice Cream</button>
+      </div>
+    </div>
+
+    <div id="morgensternsdetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><a href="http://www.morgensternsnyc.com/">Morgenstern's Finest Ice Cream</a></h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT TK</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!-- oddfellows -->
+
+    <div class="card" id="oddfellows">
+      <img src="images/oddfellows-sized.jpg" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#oddfellowsdetails">Oddfellows Ice Cream</button>
+      </div>
+    </div>
+
+    <div id="oddfellowsdetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><a href="https://www.oddfellowsnyc.com/" target="_blank">Oddfellows Ice Cream</a></h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT TK</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!--     soft swerve -->
+
+    <div class="card" id="softswerve">
+      <img src="images/soft-swerve-sized.jpg" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#softswervedetails">Soft Swerve</button>
+      </div>
+    </div>
+
+    <div id="softswervedetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><a href="http://www.softswervenyc.com/" target="_blank">Soft Swerve</a></h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT TK</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!--     superiority burger -->
+
+    <div class="card" id="superiorityburger">
+      <img src="images/superiority-burger-sized.jpg" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#superiorityburgerdetails">Superiority Burger</button>
+      </div>
+    </div>
+
+    <div id="superiorityburgerdetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><a href="http://www.superiorityburger.com/">Superiority Burger</a></h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT TK</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!--     van leeuwen -->
+
+    <div class="card" id="vanleeuwen">
+      <img src="images/van-leeuwen-sized.jpg" class="image">
+      <div class="overlay">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#vanleeuwendetails">Van Leeuwen Artisan Ice Cream</button>
+      </div>
+    </div>
+
+    <div id="vanleeuwendetails" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><a href="www.vanleeuwenicecream.com" target="_blank"></a>Van Leeuwen Artisan Ice Cream</h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT TK</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+  </div>
+
+
+<footer><p>Created by <a href="http://www.lauraleebove.com" target="_blank">Laura Leebove</a>  |  <a href="https://www.instagram.com/explore/tags/llsadventuresinicecream/" target="_blank">#llsadventuresinicecream</a> on Instagram</p></footer>
+
+  <script src="js/jquery-2.1.4.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
