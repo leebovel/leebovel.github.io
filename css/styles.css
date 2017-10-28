@@ -188,6 +188,35 @@ button {
   border: none;
 }
 
-@media only screen and (max-width: 750px){
+
+/*@media only screen and (max-width: 320px){
+  .shops {
+    width: 300px;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .shops {
+    width: 450px;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  .shops {
+    width: 500px;
+  }*/
+
+}
+
+@media only screen and (max-width: 930px){
+  .shops {
+    width: 900px;
+  }
+  body {
+    width: 700px;
+  }
+
 
 }

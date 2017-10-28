@@ -16,80 +16,100 @@ $(function(){
     {
       name: "cedars",
       city: ["brooklyn"],
-      criteria: ["unique", "nofrills", "otherfood"],
+      criteria: ["unique", "nofrills", "otherfood", "international", "pints"],
     },
 
     {
       name: "chinatown",
       city: ["manhattan"],
-      criteria: ["choices"],
-    }
+      criteria: ["choices", "international"],
+    },
 
     {
       name: "cones",
       city: ["manhattan"],
-      criteria: ["choices", "vegan"],
-    }
+      criteria: ["choices", "vegan", "international"],
+    },
 
     {
       name: "gelato",
       city: ["manhattan"],
       criteria: ["choices", "adventurous flavors", "vegan"],
-    }
+    },
 
     {
       name: "iceandvice",
       city: ["manhattan"],
       criteria: ["adventurous", "funcones", "vegan", "sundaes"],
-    }
+    },
 
     {
       name: "morgansterns",
       city: ["manhattan"],
       criteria: ["sundaes", "adventurous", "vegan", "choices"],
-    }
+    },
 
     {
       name: "oddfellows",
       city: ["manhattan", "brooklyn"],
       criteria: ["adventurous"],
-    }
+    },
 
     {
       name: "softswerve",
       city: ["manhattan"],
-      criteria: ["soft serve", "toppings", "sundaes", "cones"],
-    }
+      criteria: ["soft serve", "toppings", "sundaes", "funcones"],
+    },
 
     {
       name: "superiorityburger",
       city: ["manhattan"],
       criteria: ["adventurous", "vegan", "otherfood"],
-    }
+    },
 
     {
       name: "vanleeuwen",
       city: ["manhattan", "brooklyn"],
       criteria: ["vegan", "sundaes", "nofrills", "pints"],
-    }
+    },
   ]
 
 // check box
 
-$('input[type="checkbox"]').click(function() {
-  var checkboxName = $(this).attr("value");
 
-  var filteredShops = shops.filter(function(shop) {
-    return shop.city.includes(checkboxName);
-  })
+  $('input[type="checkbox"]').click(function() {
+    // console.log("checked box");
+    var checkboxName = $(this).attr("value");
+
+    var filteredShops = shops.filter(function(shop) {
+      return shop.city.includes(checkboxName);
+});
+
+
+
+
+
+
+
+  // console.log(checkboxName);
+
+  // console.log(filteredShops);
+
 
   // print filtered list to the screen
-  console.log(checkboxName);
-
-  console.log(filteredShops);
 
 
- });
+// function to clear all cards (before printing filtered cards)
+
+function clearBoxes() {
+  $(".card").css("display", "none");
+  console.log("hid boxes");
+};
+
+
+
+
+});
 
 
 // read and store input
