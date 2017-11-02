@@ -4,146 +4,195 @@ $(function(){
     { 
       name: "amplehills",
       city: ["manhattan", "brooklyn"],
-      criteria: ["pints", "adventurous", "funcones", "sundaes"],
+      criteria: ["pints", "adventurous", "funcones", "sundaes", "all"],
     },
 
     {
       name: "biggayicecream",
       city: ["manhattan"],
-      criteria: ["toppings", "softserve", "sundaes"],
+      criteria: ["toppings", "softserve", "sundaes", "all"],
     },
 
     {
       name: "cedars",
       city: ["brooklyn"],
-      criteria: ["unique", "nofrills", "otherfood", "international", "pints"],
+      criteria: ["international", "pints", "all"],
     },
 
     {
       name: "chinatown",
       city: ["manhattan"],
-      criteria: ["choices", "international"],
+      criteria: ["choices", "international", "all"],
     },
 
     {
       name: "cones",
       city: ["manhattan"],
-      criteria: ["choices", "vegan", "international"],
+      criteria: ["choices", "vegan", "international", "all"],
     },
 
     {
       name: "gelato",
       city: ["manhattan"],
-      criteria: ["choices", "adventurous flavors", "vegan"],
+      criteria: ["choices", "adventurous flavors", "vegan", "all"],
     },
 
     {
       name: "iceandvice",
       city: ["manhattan"],
-      criteria: ["adventurous", "funcones", "vegan", "sundaes"],
+      criteria: ["adventurous", "funcones", "vegan", "sundaes", "all"],
     },
 
     {
-      name: "morgansterns",
+      name: "morgensterns",
       city: ["manhattan"],
-      criteria: ["sundaes", "adventurous", "vegan", "choices"],
+      criteria: ["sundaes", "adventurous", "vegan", "choices", "softserve", "pints", "all"],
     },
 
     {
       name: "oddfellows",
-      city: ["manhattan", "brooklyn"],
+      city: ["manhattan", "brooklyn", "all"],
       criteria: ["adventurous"],
     },
 
     {
       name: "softswerve",
       city: ["manhattan"],
-      criteria: ["soft serve", "toppings", "sundaes", "funcones"],
+      criteria: ["softserve", "toppings", "sundaes", "funcones", "all"],
     },
 
     {
       name: "superiorityburger",
       city: ["manhattan"],
-      criteria: ["adventurous", "vegan", "otherfood"],
+      criteria: ["adventurous", "vegan", "all"],
     },
 
     {
       name: "vanleeuwen",
       city: ["manhattan", "brooklyn"],
-      criteria: ["vegan", "sundaes", "nofrills", "pints"],
+      criteria: ["vegan", "sundaes", "pints", "all"],
     },
+
   ]
 
-// check box
+// // check box
 
 
-  $('input[type="checkbox"]').click(function() {
-    // console.log("checked box");
-    var checkboxName = $(this).attr("value");
-
-    var filteredShops = shops.filter(function(shop) {
-      return shop.city.includes(checkboxName);
-});
+//   $('input[type="checkbox"]').click(function() {
+//     // console.log("checked box");
+//     var checkboxName = $(this).attr("value");
 
 
+  
+//     var filteredShops = shops.filter(function(shop) {
+//       return shop.city.includes(checkboxName);
+
+  
+
+//   });
 
 
+  // listener for location checkboxes
+  $('.location input[type="radio"]').click(function() {
+    console.log("clicked location");
+    // determine which checkboxes are checked
+    var checkedElements = $('.location input[type="radio"]').filter(':checked');
+
+    // create an empty array that will contain a list of selected
+    // options
+    var selectedLocations = [];
 
 
+    // iterate through the list of selected options and pull out the id
+    // store the id into an array
+    $.each(checkedElements, function(index, element) {
+      selectedLocations.push(element.id);
+    });
 
-  // console.log(checkboxName);
+    // print the array to the console
+    console.log(selectedLocations);
 
-  // console.log(filteredShops);
+  });
+
+  // CRITERIA RADIO BUTTONS SECTION //
+
+  // listener for criteria checkbox buttons
+  $('.criteria input[type="radio"]').click(function() {
+    console.log("clicked criteria");
+    clearBoxes();
+    // CHANGE TO RADIO BUTTONS // 
+
+    // determine which checkboxes are checked
+    var checkedElements = $('.criteria input[type="radio"]').filter(':checked');
 
 
-  // print filtered list to the screen
+    // create an empty array that will contain a list of selected
+    // options
+    var selectedAttributes = [];
 
+    // iterate through the list of selected options and pull out the id
+    // store the id into an array
+    $.each(checkedElements, function(index, element) {
+      selectedAttributes.push(element.id);
+    });
+
+
+    // print the array to the console
+    // console.log(selectedAttributes);
+
+    console.log(selectedAttributes);
+
+    filterCriteria(selectedAttributes[0]);
+
+    // if shop.location.includes(selectedAttributes) {
+    //   $(".card").css("display", "show"); 
+    //   }
+    // else {
+    //     $(".card").css("display", "hide");
+    //  }
+
+
+  });
+
+
+  function filterCriteria(criteria) {
+
+    var selectedShops = [];
+
+    selectedShops = _.filter(shops, function(shop) {
+      return shop.criteria.includes(criteria);
+    });
+
+   displayResults(selectedShops);
+  }
+
+
+  function displayResults(filteredShops) {
+    clearBoxes();
+
+    filteredShops.forEach(function(shop) {
+      // use jQuery to search shops container for element with that matches the "name"
+      // then change display property to block
+
+      var shopId = "#" + shop.name;
+      console.log(shopId);
+      $(shopId).css("display", "block");
+    })
+
+  }
 
 // function to clear all cards (before printing filtered cards)
 
 function clearBoxes() {
   $(".card").css("display", "none");
-  console.log("hid boxes");
 };
 
+// function to show all cards
 
+function showBoxes() {
+  $(".card").css("display", "block");
+}
 
-
-});
-
-
-// read and store input
-
-// if manhattan is checked, only display shops w/ manhattan
-
-// else, display all shops w/ brooklyn
-
-
-// 
-
-
-// var location = ["brooklyn", "manhattan"]
-
-
-// test
-
-
-
-    // if ($('input[type="checkbox"]:checked').length > 0) {
-    //     $('.wrap').prepend($('.wrap > div[class=' + this.id + ']'));
-    //     $('.wrap > div').hide();
-    //     $('input[type="checkbox"]:checked').each(function() {
-    //         $('.wrap >div[class=' + this.id + ']').fadeIn("slow");
-    //     });
-    // } else {
-    //     var array  = ['entry1', 'entry2', 'entry3', 'entry4'] ;
-    //      $.each(array,function(index,value){
-    //        $('.wrap').append($('.'+value));    // add . here
-    //       });
-    //     $('.wrap > div').fadeIn("slow");
-   
-// end test
-
-
+$(".all").click(showBoxes);
 
 });

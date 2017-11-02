@@ -11,81 +11,77 @@
 <body>
   <header>
     <h1>Your Perfect NYC Scoop</h1>
-    <h2>For ice cream lovers in NYC, choosing where to get the best frozen treats can be 
+    <h2>For ice cream lovers in NYC, choosing where to indulge in a frozen treat can be 
     overwhelming: This town is packed with amazing ice cream shops! But we all have different
-    tastes. Some of us are looking for mind-bending flavor combinations, while others crave
-    something a little more traditional. Whatever your tastes, this city has got you covered.</h2>
+    tastes, whether you're looking for mind-bending flavor combinations or something to remind
+    you of childhood. Whatever you're in the mood for, this city has got you covered.</h2>
     
-    <h3>Select your preferences from the checkboxes below, and discover the best spot for your perfect scoop.</h3>
+    <h3>Browse shops or select a preference below, and discover the best spot for your perfect scoop.</h3>
   </header>
 
-  <div class="location">
+<!--   <div class="location">
     <legend><strong>Located in:</strong></legend>
       <div class="checkbox">
-        <input type="checkbox" id="manhattan" name="location" value="manhattan">
+        <input type="radio" id="manhattan" name="location" value="manhattan">
         <label for="manhattan">Manhattan</label>
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="brooklyn" name="location" value="brooklyn">
+        <input type="radio" id="brooklyn" name="location" value="brooklyn">
         <label for="brooklyn">Brooklyn</label>
       </div>
-  </div>
+  </div> -->
 
   <div class="criteria">
-    <legend><strong>Great if you want:</strong></legend>
-      <div class="checkbox">
-        <input type="checkbox" id="vegan" name="criteria" value="vegan">
-        <label for="vegan">Vegan options</label>
-      </div>
+    <legend><strong>Find shops with:</strong></legend>
 
       <div class="checkbox">
-        <input type="checkbox" id="softserve" name="criteria" value="softserve">
-        <label for="softserve">Soft serve</label>
-      </div>
-
-      <div class="checkbox">
-        <input type="checkbox" id="adventurous" name="criteria" value="adventurous">
+        <input type="radio" id="adventurous" name="criteria" value="adventurous">
         <label for="adventurous">Adventurous flavors</label>
       </div>
 
       <div class="checkbox">
-        <input type="checkbox" id="toppings" name="criteria" value="toppings">
-        <label for="toppings">Eccentric toppings</label>
+        <input type="radio" id="vegan" name="criteria" value="vegan">
+        <label for="vegan">Impressive vegan options</label>
       </div>
 
       <div class="checkbox">
-        <input type="checkbox" id="sundaes" name="criteria" value="sundaes">
+        <input type="radio" id="sundaes" name="criteria" value="sundaes">
         <label for="sundaes">Sundaes and other frozen treats</label>
       </div>
 
       <div class="checkbox">
-        <input type="checkbox" id="choices" name="criteria" value="choices">
+        <input type="radio" id="softserve" name="criteria" value="softserve">
+        <label for="softserve">Soft serve</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="radio" id="toppings" name="criteria" value="toppings">
+        <label for="toppings">Eccentric toppings</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="radio" id="choices" name="criteria" value="choices">
         <label for="choices">Extensive choices</label>
       </div>
 
       <div class="checkbox">
-        <input type="checkbox" id="funcones" name="criteria" value="funcones">
+        <input type="radio" id="funcones" name="criteria" value="funcones">
         <label for="funcones">Novelty cones</label>
       </div>
 
       <div class="checkbox">
-        <input type="checkbox" id="otherfood" name="criteria" value="otherfood">
-        <label for="otherfood">Non-ice cream eats</label>
+        <input type="radio" id="international" name="criteria" value="international">
+        <label for="international">International specialties</label>
       </div>
 
       <div class="checkbox">
-        <input type="checkbox" id="unique" name="criteria" value="unique">
-        <label for="unique">Something you can't find elsewhere</label>
-      </div>
-
-      <div class="checkbox">
-        <input type="checkbox" id="pints" name="criteria" value="pints">
+        <input type="radio" id="pints" name="criteria" value="pints">
         <label for="pints">Pints to go</label>
       </div>
 
-      <div class="checkbox">
-        <input type="checkbox" id="nofrills" name="criteria" value="nofrills">
-        <label for="nofrills">No-frills flavors</label>
+      <div class="viewAll">
+        <input type="radio" id="all" name="criteria" value="all">
+        <label for="all">View All Shops</label>
       </div>
 
   </div>
@@ -167,7 +163,9 @@
       </div>
       <div class="modal-body">
         <p><strong>Location:</strong> Brooklyn (Bay Ridge)</p>
+        
         <p>This small bakery in Bay Ridge, Brooklyn, is the only place we know of where you can get dondurma, the Turkish ice cream with a sort of stretchy consistency that comes from mastic, a gummy plant resin. It comes in classic chocolate or vanilla, but for something different try the kashta, a sweet cream flavor with pistachios. (It’s also a bargain, at only about $2 a scoop!)</p>
+
         <strong>Sample flavors:</strong> Kashta with pistachio, chocolate, mango</p>
       </div>
     </div>
@@ -415,6 +413,7 @@
 
   <script src="js/jquery-2.1.4.js"></script>
   <script src="js/bootstrap.js"></script>
+  <script src="js/lodash.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

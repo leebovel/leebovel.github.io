@@ -18,7 +18,7 @@ h1 {
 }
 
 h2 {
-/*  width: 600px;*/
+  width: 800px;
   text-align: center;
   font-size: 18px;
   margin: 0 auto;
@@ -98,6 +98,14 @@ img {
 
 legend {
   font-style: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.viewAll {
+  float: left;
+  font-weight: bold; 
+  margin-top: 20px;
 }
 
 .criteria, .location {
@@ -163,6 +171,7 @@ footer {
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
+
 /* The Close Button */
 .close {
     color: #aaa;
@@ -188,8 +197,8 @@ button {
   border: none;
 }
 
-
-/*@media only screen and (max-width: 320px){
+/*
+@media only screen and (max-width: 320px){
   .shops {
     width: 300px;
   }
@@ -201,22 +210,29 @@ button {
     width: 450px;
   }
 
-}
+}*/
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 400px) {
   .shops {
-    width: 500px;
-  }*/
+    width: 400px;
+  }
+  body {
+    width: 400px;
+  }
+  .modal-content {
+    width: 400px;
+  }
 
 }
 
-@media only screen and (max-width: 930px){
+@media only screen and (max-width: 930px) {
   .shops {
     width: 900px;
   }
   body {
     width: 700px;
   }
-
-
+  .modal-content {
+    width: 600px;
+  }
 }
